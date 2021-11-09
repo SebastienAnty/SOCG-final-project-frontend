@@ -1,11 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/common/Navbar";
+import Hero from "./components/Hero";
+import Main from "./components/Main";
+import Footer from './components/common/Footer';
+
+
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>New</h1>
-    </div>
+    <>
+      <nav className="App">
+        <h1>
+          <Navbar />
+          <Hero />
+          <Main />
+          <Footer /> 
+        </h1>
+      </nav>
+    </>
   );
 }
 

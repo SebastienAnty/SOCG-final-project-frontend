@@ -1,5 +1,12 @@
 
+import { Button } from "@mui/material"
 
 export default function Main() {
-    <h1>Main</h1>
-}
+    return (
+    <>
+        <div>
+            <Button>Chat</Button>
+        </div>
+    </>
+    )
+};
