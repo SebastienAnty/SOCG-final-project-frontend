@@ -10,7 +10,6 @@ export default function Navbar() {
             <h1>SOCG</h1>
             <Stack >
                 <Avatar />
-                User Name 
             </Stack>
         </div>
     </>

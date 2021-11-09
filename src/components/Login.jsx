@@ -1,5 +1,11 @@
+import Typography from '@mui/material/Typography';
 
 
 export default function Login() {
-    <h1>Login</h1>
+    return (
+        <Typography>
+            {'Copyright © '}
+           Social Gaming
+        </Typography>
+    )
 }
