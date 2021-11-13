@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 export default function Games() {
   const [games, setGames] = useState();
   useEffect(() => {
-    fetch("https://socg-sma.web.app")
-      .then((res) => res.json())
-      .then((data) => setGames)
-      .catch((err) => alert);
+    fetch(`https://socg-sma.web.app`)
+      .then((res) => res.json(res))
+      .then((data) => setGames(data))
+      .catch((err) => alert(err));
   }, []);
   return (
     <>
