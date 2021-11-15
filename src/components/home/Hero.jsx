@@ -7,10 +7,16 @@ import { CardMedia } from "@mui/material";
 export default function Hero() {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          backgroundColor: "#b71c1c",
+        }}
+      >
         <Button style={{ fontSize: 20, color: "gold" }}>Home</Button>
         <Button style={{ fontSize: 20, color: "gold" }}>Friends</Button>
-        <Button style={{ fontSize: 20, color: "gold" }}>Message</Button>
+        <Button style={{ fontSize: 20, color: "gold" }}>Messages</Button>
         <Button style={{ fontSize: 20, color: "gold" }}>Settings</Button>
       </div>
       <div

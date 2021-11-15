@@ -11,20 +11,17 @@ firebase.initializeApp({
 });
 
 const auth = firebase.auth();
-const firestore = firebase.firestore();
 
 export default function SignIn() {
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   };
-  return (
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
-  );
+  return <button onClick={signInWithGoogle}>Sign in with Google</button>;
 }
 
-export default function SignOut() {
-  return auth.currentUser && (
-    <button onClick={() => auth.signOut()}>Sign out</button>
-  )
-}
+// export default function SignOut() {
+//   return auth.currentUser && (
+//     <button onClick={() => auth.signOut()}>Sign out</button>
+//   )
+// }

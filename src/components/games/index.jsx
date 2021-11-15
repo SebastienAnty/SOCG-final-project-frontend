@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 export default function Games() {
   const [games, setGames] = useState();
   useEffect(() => {
-    fetch(`https://socg-sma.web.app`)
-      .then((res) => res.json(res))
+    fetch("https://socg-sma-default-rtdb.firebaseio.com")
+      .then((res) => res.json())
       .then((data) => setGames(data))
       .catch((err) => alert(err));
   }, []);
