@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
 
-export default function Games() {
+export default function Games(props) {
   const [games, setGames] = useState();
   useEffect(() => {
-    fetch("https://socg-sma-default-rtdb.firebaseio.com")
+    fetch("https://socg-sma.web.app/games")
       .then((res) => res.json())
       .then((data) => setGames(data))
       .catch((err) => alert(err));
   }, []);
   return (
     <>
-      <h1>Games</h1>
       {!games ? (
         <h2>Loading...</h2>
       ) : (
         games.map((_games) => {
           return (
             <div key={_games.id}>
-              {_games.title} {_games.imageUrl}
+              <h1>
+                {_games.title} {_games.imageUrl}
+              </h1>
             </div>
           );
         })

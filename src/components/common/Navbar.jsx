@@ -1,7 +1,6 @@
 import React from "react";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
 import "./navbar.css";
+import { Button } from "@mui/material";
 
 export default function Navbar() {
   return (
@@ -16,9 +15,7 @@ export default function Navbar() {
         }}
       >
         <h1>Social Gaming</h1>
-        <Stack>
-          <Avatar />
-        </Stack>
+        <Button style={{ fontSize: 25, color: "white" }}>Login/Logout</Button>
       </div>
     </>
   );
