@@ -46,7 +46,6 @@ export default function SignUp() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
         const json = JSON.stringify(res.user);
-        localStorage.setItem("user", json);
         console.log(res.user); // WORKING
         createUser(res.user.uid);
         // navigate("/signup");

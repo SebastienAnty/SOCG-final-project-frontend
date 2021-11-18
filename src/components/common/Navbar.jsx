@@ -1,10 +1,12 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router";
+import { UserContext } from "../../App";
 import "./navbar.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
   return (
     <>
       <div
@@ -17,7 +19,10 @@ export default function Navbar() {
         }}
       >
         <Button onClick={() => navigate("/")}>Social Gaming</Button>
-        <Button onClick={() => navigate("/login")}>Login/SignUp</Button>
+
+        {!user && (
+          <Button onClick={() => navigate("/login")}>Login/SignUp</Button>
+        )}
       </div>
     </>
   );

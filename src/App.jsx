@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import Navbar from "./components/common/Navbar";
@@ -9,6 +9,10 @@ import Footer from "./components/common/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { Chat } from "@mui/icons-material";
+
+export const UserContext = createContext(null);
 
 const firebaseConfig = {
   apiKey: "AIzaSyBdrCw8ywZVNe2OrCWgZaE1DWCSuHTluG0",
@@ -23,15 +27,30 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 export default function App() {
+  const [user, setUser] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const auth = getAuth();
+  useEffect(() => {
+    onAuthStateChanged(auth, (u) => {
+      setUser(u);
+      setLoaded(true);
+    });
+  }, [auth]);
+
+  if (!loaded) {
+    return <></>;
+  }
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <UserContext.Provider value={{ user, setUser }}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </UserContext.Provider>
   );
 }

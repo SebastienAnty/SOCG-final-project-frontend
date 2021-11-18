@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from "./home/Hero";
-import Main from "./home/Main";
+import Chat from "./home/Chat";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Main />
+      <Chat />
     </>
   );
 }
