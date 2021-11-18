@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import GameCard from "../GameCard";
 
-export default function Games(props) {
+export default function Games() {
   const [games, setGames] = useState();
   useEffect(() => {
     fetch("https://socg-sma.web.app/games")
@@ -14,13 +15,7 @@ export default function Games(props) {
         <h2>Loading...</h2>
       ) : (
         games.map((_games) => {
-          return (
-            <div key={_games.id}>
-              <h1>
-                {_games.title} {_games.imageUrl}
-              </h1>
-            </div>
-          );
+          return <GameCard key={_games.id} game={_games} />;
         })
       )}
     </>

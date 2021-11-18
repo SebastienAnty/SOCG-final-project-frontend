@@ -1,12 +1,13 @@
-
-import { Button } from "@mui/material"
+// import Chat from "../chat/Chat";
+import { Button } from "@mui/material";
 
 export default function Main() {
-    return (
+  return (
     <>
-        <div>
-            <Button>Chat</Button>
-        </div>
+      <div>
+        {/* <Chat /> */}
+        <Button>Chat</Button>
+      </div>
     </>
-    )
-};
+  );
+}
