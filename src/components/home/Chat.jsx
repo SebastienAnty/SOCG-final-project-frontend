@@ -77,7 +77,7 @@ export default function ChatRoom() {
           placeholder="say something nice"
         />
 
-        <button type="submit">🕊️</button>
+        <button type="submit">Send</button>
       </form>
     </>
   );
