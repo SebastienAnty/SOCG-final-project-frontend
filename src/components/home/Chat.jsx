@@ -21,7 +21,7 @@ function ChatMessage(props) {
   return (
     <>
       <div className={`message ${messageClass}`}>
-        <img
+        <uimg
           src={
             photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png"
           }
@@ -48,13 +48,13 @@ export default function ChatRoom() {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const { uid, photoURL } = auth.currentUser;
+    const { uid } = auth.currentUser;
 
     await addDoc(messagesCollection, {
       text: formValue,
       createdAt: serverTimestamp(),
       uid,
-      photoURL,
+      // photoURL,
     });
 
     setFormValue("");
@@ -74,7 +74,7 @@ export default function ChatRoom() {
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder="say something nice"
+          placeholder="Say Something Nice"
         />
 
         <button type="submit">Send</button>

@@ -1,10 +1,32 @@
+main {
+  padding: 10px;
+  height: 80vh;
+  overflow-y: scroll;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
 form {
   height: 10vh;
-  position: fixed;
+  position: initial;
   bottom: 0;
   background-color: rgb(24, 23, 23);
   width: 100%;
-  max-width: 728px;
+  max-width: 100;
   display: flex;
   font-size: 1.5rem;
 }
@@ -37,7 +59,42 @@ button {
   font-size: 1.25rem;
 }
 
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+}
+
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  background: #4ac959;
+  align-self: flex-end;
+}
+.received p {
+  background: #455a64;
+  color: black;
+}
+uimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
 }

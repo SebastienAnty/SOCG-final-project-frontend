@@ -1,5 +1,5 @@
 import Card from "@mui/material/Card";
-import { CardActionArea, CardMedia } from "@mui/material";
+import { CardActionArea, CardMedia, CardContent } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 export default function GameCard({ game }) {
@@ -8,16 +8,18 @@ export default function GameCard({ game }) {
       style={{
         display: "flex",
         flexDirection: "row",
+        flexWrap: "wrap",
         alignContent: "space-evenly",
+        width: "23%",
       }}
     >
       <CardActionArea>
-        <CardMedia>
-          <img src={game.imageUrl} alt={game.title} />
-        </CardMedia>
-        <Typography>
-          <h1>{game.title}</h1>
-        </Typography>
+        <CardContent>
+          <CardMedia>
+            <img src={game.imageUrl} alt={game.title} />
+          </CardMedia>
+          <Typography>{game.title}</Typography>
+        </CardContent>
       </CardActionArea>
     </Card>
   );
