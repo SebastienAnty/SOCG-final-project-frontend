@@ -74,6 +74,7 @@ export default function SignUp() {
             type="fname"
             value={fname}
             onChange={(e) => setFname(e.target.value)}
+            autoComplete="current-fname"
           />
           <TextField
             margin="normal"
@@ -95,6 +96,7 @@ export default function SignUp() {
             type="onlineid"
             value={onlineid}
             onChange={(e) => setOnlineid(e.target.value)}
+            autoComplete="current-onlineid"
           />
           <TextField
             margin="normal"

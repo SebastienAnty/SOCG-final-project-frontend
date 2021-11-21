@@ -57,6 +57,7 @@ export default function Login() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="current-email"
           />
           <TextField
             margin="normal"
