@@ -18,7 +18,9 @@ export default function GameCard({ game }) {
           <CardMedia>
             <img src={game.imageUrl} alt={game.title} />
           </CardMedia>
-          <Typography>{game.title}</Typography>
+          <Typography>
+            <h1>{game.title}</h1>
+          </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

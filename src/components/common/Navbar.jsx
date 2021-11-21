@@ -15,14 +15,20 @@ export default function Navbar() {
           alignContent: "space-around",
           flexDirection: "row",
           justifyContent: "space-between",
-          backgroundColor: "#ff9800",
         }}
+        class="neon"
       >
-        <Button onClick={() => navigate("/")}>Social Gaming</Button>
+        <Button>
+          <h1 class="neon-button" onClick={() => navigate("/")}>
+            Social Gaming
+          </h1>
+        </Button>
 
         {!user && (
           <Button onClick={() => navigate("/login")}>Login/SignUp</Button>
         )}
+
+        {/* <Button onClick={() => navigate("/login")}>Sign Out</Button> */}
       </div>
     </>
   );

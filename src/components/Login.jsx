@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { UserContext } from "../App";
+import "./login.css";
 
 const theme = createTheme();
 
@@ -37,9 +38,9 @@ export default function Login() {
   };
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} className="page-id-35">
         <Container component="main" maxWidth="xs">
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" class="entry">
             Sign In
           </Typography>
           <form

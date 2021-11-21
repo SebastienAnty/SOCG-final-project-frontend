@@ -37,11 +37,18 @@ export default function App() {
     });
   }, [auth]);
 
-  if (!loaded) {
-    return <></>;
+  function SignOut(event) {
+    event
+      .preventDefault()
+      .then(() => {
+        setUser(null);
+        localStorage.setItem("user", null);
+      })
+      .catch((err) => console.log(err));
   }
+
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser, SignOut }}>
       <Router>
         <Navbar />
         <Routes>

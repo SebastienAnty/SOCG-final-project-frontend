@@ -57,7 +57,7 @@ export default function SignUp() {
     <>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" class="entry">
             Sign Up
           </Typography>
           <form
@@ -84,6 +84,7 @@ export default function SignUp() {
             type="lname"
             value={lname}
             onChange={(e) => setLname(e.target.value)}
+            autoComplete="current-lname"
           />
           <TextField
             margin="normal"
@@ -104,7 +105,7 @@ export default function SignUp() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            autoFocus
+            autoComplete="current-email"
           />
           <TextField
             margin="normal"
