@@ -33,7 +33,7 @@ form {
 
 form button {
   width: 20%;
-  background-color: rgb(108, 10, 255);
+  background-color: #42a5f5;
 }
 
 input {
@@ -89,7 +89,7 @@ button:disabled {
   align-self: flex-end;
 }
 .received p {
-  background: #455a64;
+  background: white;
   color: black;
 }
 uimg {

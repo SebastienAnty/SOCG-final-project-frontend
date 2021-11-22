@@ -18,7 +18,6 @@ export default function Hero() {
           justifyContent: "space-between",
         }}
       >
-        <br />
         <Games />
       </div>
     </>
