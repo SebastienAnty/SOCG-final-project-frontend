@@ -46,6 +46,7 @@ function ChatMessage(props) {
   const auth = getAuth();
   const { text, uid, photoURL } = props.message;
 
+  // TODO: Add avatar for each user
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
   return (
@@ -70,7 +71,7 @@ export default function ChatRoom() {
   const q = query(messagesCollection, orderBy("createdAt"));
 
   const [messages] = useCollectionData(q, { idField: "id" });
-
+  console.log(messages);
   const [formValue, setFormValue] = useState("");
 
   console.log(messages);

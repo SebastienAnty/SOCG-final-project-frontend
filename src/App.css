@@ -5,11 +5,15 @@
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 14%);
 }
+
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: var(--clr-bg);
+  /* background: var(--clr-bg); */
+  background-image: url("https://1.bp.blogspot.com/-ImkuaBR60yY/YOmby7RgCnI/AAAAAAAAiq0/h_rhcKMhzkscvRwZWBFE5J8nQmMnieMCgCLcBGAsYHQ/s1920/GAMER-WALLPAPER-HD.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--clr-neon);
 }
 
