@@ -6,7 +6,6 @@ export default function GameCard({ game }) {
   return (
     <Card
       style={{
-        display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
         alignContent: "space-evenly",
@@ -16,7 +15,11 @@ export default function GameCard({ game }) {
       <CardActionArea>
         <CardContent>
           <CardMedia>
-            <img src={game.imageUrl} alt={game.title} />
+            <img
+              style={{ width: "300px", height: "350px", display: "flex" }}
+              src={game.imageUrl}
+              alt={game.title}
+            />
           </CardMedia>
           <Typography>
             <h1>{game.title}</h1>
