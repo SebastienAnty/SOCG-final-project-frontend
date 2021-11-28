@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Grid } from "@mui/material";
 import GameCard from "../GameCard";
 
 export default function Games() {
@@ -15,13 +16,26 @@ export default function Games() {
   }, []);
   return (
     <>
-      {!games ? (
-        <h2>Loading...</h2>
-      ) : (
-        games.map((_games) => {
-          return <GameCard key={_games.id} game={_games} />;
-        })
-      )}
+      <Grid
+        container
+        spacing={3}
+        justify="flex-start"
+        alignItems="flex-start"
+        gridTemplateColumns="repeat(3, 2fr)"
+        gap="50px"
+        maxWidth="950px"
+        display="grid"
+        flex-wrap="wrap"
+        width="100%"
+      >
+        {!games ? (
+          <h2>Loading...</h2>
+        ) : (
+          games.map((_games) => {
+            return <GameCard key={_games.id} game={_games} />;
+          })
+        )}
+      </Grid>
     </>
   );
 }
