@@ -12,14 +12,17 @@ export default function Navbar() {
       <div
         style={{
           display: "flex",
-          alignContent: "space-around",
+          alignContent: "space-between",
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
+          textAlign: "center",
         }}
-        class="neon"
       >
         <Button>
-          <h1 class="neon-button" onClick={() => navigate("/")}>
+          <h1
+            className="neon-button navbar-expand-lg navbar-dark bg-dark"
+            onClick={() => navigate("/")}
+          >
             Social Gaming
           </h1>
         </Button>
@@ -27,8 +30,6 @@ export default function Navbar() {
         {!user && (
           <Button onClick={() => navigate("/login")}>Login/SignUp</Button>
         )}
-
-        {/* <Button onClick={() => navigate("/login")}>Sign Out</Button> */}
       </div>
     </>
   );

@@ -3,6 +3,7 @@
 
 import { useContext } from "react";
 import { UserContext } from "../../App";
+// import Carousel from "../GameCarousel";
 import Games from "../games/index";
 // import Carousel from "./Carousel";
 
@@ -10,14 +11,8 @@ export default function Hero() {
   const { user } = useContext(UserContext);
   return (
     <>
-      {/* <h1 class="neon-button">Welcome {!user ? "Guest" : user.fname}</h1> */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
+      {/* <h1 className="neon-button">Welcome {!user ? "Guest" : user.fname}</h1> */}
+      <div>
         <Games />
       </div>
     </>

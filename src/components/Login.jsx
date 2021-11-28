@@ -37,9 +37,9 @@ export default function Login() {
   };
   return (
     <>
-      <ThemeProvider theme={theme} class="page-id-35">
+      <ThemeProvider theme={theme} className="page-id-35">
         <Container component="main" maxWidth="xs">
-          <Typography component="h1" variant="h5" class="entry">
+          <Typography component="h1" variant="h5" className="entry">
             Sign In
           </Typography>
           <form

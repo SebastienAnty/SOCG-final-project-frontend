@@ -57,7 +57,7 @@ export default function SignUp() {
     <>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
-          <Typography component="h1" variant="h5" class="entry">
+          <Typography component="h1" variant="h5" className="entry">
             Sign Up
           </Typography>
           <form

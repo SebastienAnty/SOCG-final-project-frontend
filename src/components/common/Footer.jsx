@@ -24,16 +24,16 @@ const Footer = () => {
         <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/">How it Works</FooterLink>
-              <FooterLink to="/">Testimonials</FooterLink>
-              <FooterLink to="/">Careers</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
               <FooterLinkTitle>Contact Us</FooterLinkTitle>
               <FooterLink to="/">Contact</FooterLink>
               <FooterLink to="/">Support</FooterLink>
               <FooterLink to="/">Sponsorships</FooterLink>
+            </FooterLinkItems>
+            <FooterLinkItems>
+              <FooterLinkTitle>About Us</FooterLinkTitle>
+              <FooterLink to="/">How it Works</FooterLink>
+              <FooterLink to="/">Testimonials</FooterLink>
+              <FooterLink to="/">Careers</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
@@ -55,7 +55,7 @@ const Footer = () => {
           <SocialMediaWrap>
             <SocialLogo to="/">Social Gaming</SocialLogo>
             <WebsiteRights>
-              Eventify © {new Date().getFullYear()} All rights reserved.
+              Social Gaming © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink
