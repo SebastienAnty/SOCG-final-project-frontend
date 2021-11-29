@@ -25,7 +25,7 @@ export default function Games() {
         alignItems="flex-start"
         gridTemplateColumns="repeat(3, 2fr)"
         gap="50px"
-        maxWidth="950px"
+        maxWidth="900px"
         display="grid"
         flex-wrap="wrap"
         width="100%"

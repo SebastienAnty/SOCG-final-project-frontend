@@ -18,7 +18,7 @@ export default function GameCard({ game }) {
         <CardContent>
           <CardMedia>
             <img
-              style={{ width: "300px", height: "350px", display: "flex" }}
+              style={{ width: "300px", height: "300px", display: "flex" }}
               src={game.imageUrl}
               alt={game.title}
             />
