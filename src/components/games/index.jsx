@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import GameCard from "../GameCard";
+import { Navigate, useNavigate } from "react-router";
 
 export default function Games() {
   const [games, setGames] = useState();
+  const navigate = useNavigate();
   useEffect(() => {
     // fetch("http://localhost:5000/games", {
     fetch("https://socg-sma.web.app/rest/games", {
@@ -31,8 +33,8 @@ export default function Games() {
         {!games ? (
           <h2>Loading...</h2>
         ) : (
-          games.map((_games) => {
-            return <GameCard key={_games.id} game={_games} />;
+          games.map((_game) => {
+            return <GameCard key={_game.id} game={_game} />;
           })
         )}
       </Grid>

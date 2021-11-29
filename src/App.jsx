@@ -11,6 +11,7 @@ import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Chat } from "@mui/icons-material";
+import GameChat from "./components/home/GameChat";
 
 export const UserContext = createContext(null);
 
@@ -54,6 +55,7 @@ export default function App() {
         <Routes>
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/game-chat/:gameId" element={<GameChat />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />

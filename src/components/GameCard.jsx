@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Coverflow from "react-coverflow";
 import Card from "@mui/material/Card";
 import { CardActionArea, CardMedia, CardContent, Button } from "@mui/material";
@@ -5,8 +6,10 @@ import { CardActionArea, CardMedia, CardContent, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 export default function GameCard({ game }) {
+  const navigate = useNavigate();
   return (
     <Card
+      onClick={() => navigate("/game-chat/" + game.id)}
       style={{
         width: "108%",
       }}

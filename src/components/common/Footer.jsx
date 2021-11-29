@@ -21,36 +21,6 @@ const Footer = () => {
   return (
     <FooterContainer id="footer">
       <FooterWrap>
-        <FooterLinksContainer>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>Contact Us</FooterLinkTitle>
-              <FooterLink to="/">Contact</FooterLink>
-              <FooterLink to="/">Support</FooterLink>
-              <FooterLink to="/">Sponsorships</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/">How it Works</FooterLink>
-              <FooterLink to="/">Testimonials</FooterLink>
-              <FooterLink to="/">Careers</FooterLink>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>Legal</FooterLinkTitle>
-              <FooterLink to="/">Contact</FooterLink>
-              <FooterLink to="/">Privacy</FooterLink>
-              <FooterLink to="/">Terms of Service</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>Learn</FooterLinkTitle>
-              <FooterLink to="/">Blog</FooterLink>
-              <FooterLink to="/">References</FooterLink>
-              <FooterLink to="/">Libraries</FooterLink>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-        </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/">Social Gaming</SocialLogo>

@@ -4,6 +4,7 @@ import {
   getFirestore,
   collection,
   query,
+  where,
   orderBy,
   addDoc,
   serverTimestamp,
@@ -59,12 +60,16 @@ function ChatMessage(props) {
   );
 }
 
-export default function ChatRoom() {
+export default function ChatRoom({ gameId }) {
   const auth = getAuth();
   const firestore = getFirestore();
   const dummy = useRef();
   const messagesCollection = collection(firestore, "messages");
-  const q = query(messagesCollection, orderBy("createdAt"));
+  const q = query(
+    messagesCollection,
+    where("gameId", "==", gameId || "soclgaming"),
+    orderBy("createdAt")
+  );
 
   const [messages] = useCollectionData(q, { idField: "id" });
   console.log(messages);
@@ -81,6 +86,7 @@ export default function ChatRoom() {
       text: formValue,
       createdAt: serverTimestamp(),
       uid,
+      gameId: gameId || "soclgaming",
     });
 
     setFormValue("");
