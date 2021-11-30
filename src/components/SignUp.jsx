@@ -30,8 +30,8 @@ export default function SignUp() {
       uid,
     };
 
-    fetch("http://localhost:5000/newusers", {
-      // fetch("https://socg-sma.web.app/rest/newusers", {
+    // fetch("http://localhost:5000/newusers", {
+    fetch("https://socg-sma.web.app/rest/newusers", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
