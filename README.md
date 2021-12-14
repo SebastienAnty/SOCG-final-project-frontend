@@ -8,6 +8,20 @@ To start creating your react app run the command:
 
 ### `npm start`
 
+### About
+
+This is the front-end for "Social Gaming". This applications number one purpose is to create a safe environment for video game users to play and find other gamers. Which also creates a safe environment for these gamers.
+
+React
+
+JavaScript
+
+Material UI
+
+JWT, FireBase Authentication
+
+The application was deployed using firebase hosting
+
 ## Installation
 
 To install the component library used for this project and have it saved in your package.json dependencies, run:
