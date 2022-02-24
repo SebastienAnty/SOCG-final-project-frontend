@@ -7,7 +7,6 @@ export default function Games() {
   const [games, setGames] = useState();
   const navigate = useNavigate();
   useEffect(() => {
-    // fetch("http://localhost:5000/games", {
     fetch("https://socg-sma.web.app/rest/games", {
       method: "GET",
       headers: { "Content-Type": "application/json" },

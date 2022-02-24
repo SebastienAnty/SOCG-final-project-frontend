@@ -1,13 +1,5 @@
 import { FaGithub, FaLinkedin, FaSchool } from "react-icons/fa";
-import {
-  FooterContainer,
-  FooterWrap,
-  FooterLinksContainer,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLinksWrapper,
-  FooterLink,
-} from "./FooterCss";
+import { FooterContainer, FooterWrap } from "./FooterCss";
 import {
   SocialMedia,
   SocialMediaWrap,
